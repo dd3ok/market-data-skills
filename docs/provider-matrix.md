@@ -44,7 +44,7 @@ Use this table to pick the narrowest market-data skill for a request.
   ticker lists, and candle OHLCV.
 - Keep it separate from Binance because Upbit uses different market codes,
   endpoint groups, candle retention behavior, and rate-limit headers.
-- Current canonical repository: `dd3ok/upbit-read-api-skill` (private).
+- Current canonical repository: `dd3ok/upbit-read-api-skill`.
 
 ## Collection rule
 
