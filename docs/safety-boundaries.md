@@ -39,8 +39,8 @@ version.
 
 ### Exchange APIs
 
-Binance workflows should keep public market data, signed account endpoints, and
-order endpoints distinct.
+Binance and Upbit workflows should keep public market data, signed account
+endpoints, and order endpoints distinct.
 
 For signed or account-impacting surfaces:
 
@@ -48,6 +48,10 @@ For signed or account-impacting surfaces:
 - require explicit user intent before touching live account workflows
 - never ask users to paste secrets into chat
 - never store secrets in repository files
+
+Upbit read-only workflows should stay within unauthenticated quotation APIs such
+as ticker, market list, and candle endpoints unless a separate authenticated
+Exchange API skill explicitly defines wider scope.
 
 ## Advice boundary
 

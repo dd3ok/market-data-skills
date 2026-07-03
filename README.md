@@ -14,6 +14,7 @@
 | TossInvest API Skill | 토스증권 기준 주식, 시장, 랭킹, 캘린더, 스크리너, 뉴스, 재무, 공개 페이지 데이터 조회 | [dd3ok/tossinvest-api-skill](https://github.com/dd3ok/tossinvest-api-skill) |
 | Yahoo Finance Market Skill | `yfinance` 기반 글로벌 주식, 차트, 재무제표, 시장 데이터 조회 | [dd3ok/yahoo-finance-market-skill](https://github.com/dd3ok/yahoo-finance-market-skill) |
 | Binance API Skill | Binance Spot REST API, 공식 endpoint 동작, signing, rate limit, 에러, testnet-safe workflow | [dd3ok/binance-api-skill](https://github.com/dd3ok/binance-api-skill) |
+| Upbit Read API Skill | Upbit read-only 시세, 마켓 목록, 캔들 OHLCV, rate limit 처리 | [dd3ok/upbit-read-api-skill](https://github.com/dd3ok/upbit-read-api-skill) (현재 private) |
 
 ## 설치
 
@@ -24,7 +25,10 @@ $skill-installer install https://github.com/dd3ok/naverstock-api-skill
 $skill-installer install https://github.com/dd3ok/tossinvest-api-skill
 $skill-installer install https://github.com/dd3ok/yahoo-finance-market-skill
 $skill-installer install https://github.com/dd3ok/binance-api-skill
+$skill-installer install https://github.com/dd3ok/upbit-read-api-skill
 ```
+
+`upbit-read-api-skill`은 현재 private repository라 접근 권한이 있는 계정에서만 설치할 수 있습니다.
 
 ## 선택 기준
 
@@ -34,6 +38,7 @@ $skill-installer install https://github.com/dd3ok/binance-api-skill
 - 토스증권 UI 기준 시세, 랭킹, 스크리너, 캘린더, 재무, 뉴스: `tossinvest-api-skill`
 - 글로벌 주식, 차트, 재무제표, 넓은 시장 비교: `yahoo-finance-market-skill`
 - Binance Spot API 동작, signing, exchange info, rate limit, testnet: `binance-api-skill`
+- Upbit 공개 read-only 시세, 마켓 목록, 캔들 OHLCV: `upbit-read-api-skill`
 
 자세한 비교는 [docs/provider-matrix.md](docs/provider-matrix.md)를 참고하세요.
 

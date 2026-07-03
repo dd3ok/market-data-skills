@@ -8,6 +8,7 @@ Use this table to pick the narrowest market-data skill for a request.
 | TossInvest quote, ranking, screener, calendar, theme, public page endpoint re-check | TossInvest API Skill | TossInvest page data and observed public web endpoints are provider-specific. |
 | US/global stock prices, charts, fundamentals, broad market comparisons | Yahoo Finance Market Skill | `yfinance` is convenient for global market data and non-provider-specific research. |
 | Binance Spot REST endpoint behavior, exchange info, rate limits, signing, testnet | Binance API Skill | Binance has its own official API model, request signing, filters, and error semantics. |
+| Upbit current ticker prices, quote-currency market lists, candles/OHLCV, rate-limit handling | Upbit Read API Skill | Upbit quotation endpoints have their own market-code shape, candle behavior, and `Remaining-Req` rate-limit header. |
 | Cross-provider comparison | Start with the provider that owns the most specific source, then corroborate with another skill if needed | Avoid mixing source semantics before the primary source is clear. |
 
 ## Provider notes
@@ -36,6 +37,14 @@ Use this table to pick the narrowest market-data skill for a request.
   workflows.
 - Keep Binance separate because it can cross from public data into signed,
   account-impacting API surfaces if boundaries are weak.
+
+### Upbit
+
+- Best for Upbit read-only quotation data: current ticker snapshots, quote-market
+  ticker lists, and candle OHLCV.
+- Keep it separate from Binance because Upbit uses different market codes,
+  endpoint groups, candle retention behavior, and rate-limit headers.
+- Current canonical repository: `dd3ok/upbit-read-api-skill` (private).
 
 ## Collection rule
 
